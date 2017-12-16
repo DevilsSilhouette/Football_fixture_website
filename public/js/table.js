@@ -1,11 +1,11 @@
-// Just testing some stuff right now. This file calls a specific league
-// and lists all of its teams.
-
 var authToken = "09af676d84d5430a8e4702bfc3e99835";
+let id = $('.leagueName').attr('id');
+let leagueUrl = "http://api.football-data.org/v1/competitions/" + id + "/leagueTable";
+
 
 $.ajax({
 	type: 'GET',
-	url: 'http://api.football-data.org/v1/competitions/445/leagueTable',
+	url: leagueUrl,
 	headers: {"X-Auth-Token": authToken}, 
 	success: function(data) {
 		$('.leagueName').text(data.leagueCaption + " Standings");
@@ -16,7 +16,7 @@ $.ajax({
 
 			if (team.position == 1) {
 				$(row).addClass("table-success");
-			} else if ([18, 19, 20].indexOf(team.position) != -1) {
+			} else if (team.position >= data.standing.length - 2) {
 				$(row).addClass("table-danger");
 			}
 

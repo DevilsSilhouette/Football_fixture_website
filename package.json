@@ -1,0 +1,28 @@
+{
+  "name": "football-fixture-website",
+  "version": "1.0.0",
+  "description": "A website that displays the fixtures for a few football competitions and teams among other data related to leagues, competitions and teams.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zusama/football-fixture-website.git"
+  },
+  "author": "Usama Zaki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zusama/football-fixture-website/issues"
+  },
+  "homepage": "https://github.com/zusama/football-fixture-website#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0"
+  }
+}

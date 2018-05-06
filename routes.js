@@ -7,4 +7,4 @@ module.exports = function(app) {
 	app.get('/table/:leagueid', (req, res) => {
 		return res.render("table", {id: req.params.leagueid});
 	});
-}
+};
